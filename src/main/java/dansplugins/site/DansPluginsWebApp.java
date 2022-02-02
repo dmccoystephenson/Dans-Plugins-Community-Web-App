@@ -1,6 +1,11 @@
 package dansplugins.site;
 
+import dansplugins.site.commands.HelpCommand;
+import dansplugins.site.commands.InfoCommand;
+import dansplugins.site.commands.QuitCommand;
+import dansplugins.site.misc.CommandSenderImpl;
 import dansplugins.site.utils.Logger;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -54,7 +59,7 @@ public class DansPluginsWebApp extends PonderApplication {
         String label;
         String[] args;
 
-        user.sendMessage("Welcome to an example ponder application. Type help to see a list of useful commands.");
+        user.sendMessage("Welcome to the Dan's Plugins Web App. Type help to see a list of useful commands.");
         while (isRunning()) {
             line = getInput();
             if (line == null) {
@@ -95,7 +100,6 @@ public class DansPluginsWebApp extends PonderApplication {
      * @return The inputted string.
      */
     private String getInput() {
-        // get input
         if (!getScanner().hasNext()) {
             return null;
         }
@@ -130,7 +134,7 @@ public class DansPluginsWebApp extends PonderApplication {
     @Override
     public boolean onCommand(CommandSender sender, String label, String[] args) {
         Logger.getInstance().log("Interpreting command " + label);
-        return getCommandService().interpretCommand(sender, label, args);
+        return getCommandService().interpretAndExecuteCommand(sender, label, args);
     }
 
     /**
@@ -205,6 +209,7 @@ public class DansPluginsWebApp extends PonderApplication {
      * @param args The arguments given to the program.
      */
     public static void main(String[] args) {
+        SpringApplication.run(DansPluginsWebApp.class, args);
         DansPluginsWebApp application = new DansPluginsWebApp();
         CommandSenderImpl sender = new CommandSenderImpl();
         application.run(sender);

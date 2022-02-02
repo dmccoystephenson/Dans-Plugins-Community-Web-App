@@ -16,9 +16,9 @@ public class InfoCommand extends ApplicationCommand {
 
     @Override
     public boolean execute(CommandSender abstractCommandSender) {
-        abstractCommandSender.sendMessage("=== Example Ponder Application Info ===");
+        abstractCommandSender.sendMessage("=== Dan's Plugins Web App Info ===");
         abstractCommandSender.sendMessage("Developer: Daniel Stephenson");
-        abstractCommandSender.sendMessage("Developed with: Ponder");
+        abstractCommandSender.sendMessage("Developed with: Spring Boot, Ponder");
         return true;
     }
 
