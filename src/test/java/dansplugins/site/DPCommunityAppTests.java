@@ -1,10 +1,10 @@
-package com.example.demo;
+package dansplugins.site;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class DPCommunityAppTests {
 
 	@Test
 	void contextLoads() {
