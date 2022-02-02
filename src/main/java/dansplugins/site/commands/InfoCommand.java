@@ -1,3 +1,7 @@
+/*
+  Copyright (c) 2022 Daniel McCoy Stephenson
+  Apache License 2.0
+ */
 package dansplugins.site.commands;
 
 import preponderous.ponder.system.abs.ApplicationCommand;
@@ -7,7 +11,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
+ * @since February 1st, 2022
  */
 public class InfoCommand extends ApplicationCommand {
     public InfoCommand() {

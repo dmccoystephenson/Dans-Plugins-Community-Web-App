@@ -1,9 +1,14 @@
+/*
+  Copyright (c) 2022 Daniel McCoy Stephenson
+  Apache License 2.0
+ */
 package dansplugins.site.utils;
 
 import dansplugins.site.dcwa;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
+ * @since February 1st, 2022
  */
 public class Logger {
     private static Logger instance;

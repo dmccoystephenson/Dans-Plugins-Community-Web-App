@@ -1,9 +1,14 @@
+/*
+  Copyright (c) 2022 Daniel McCoy Stephenson
+  Apache License 2.0
+ */
 package dansplugins.site.misc;
 
 import preponderous.ponder.system.abs.CommandSender;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
+ * @since February 1st, 2022
  */
 public class CommandSenderImpl extends CommandSender {
 

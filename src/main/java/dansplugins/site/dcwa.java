@@ -1,3 +1,7 @@
+/*
+  Copyright (c) 2022 Daniel McCoy Stephenson
+  Apache License 2.0
+ */
 package dansplugins.site;
 
 import dansplugins.site.commands.HelpCommand;
@@ -18,7 +22,8 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
+ * @since February 1st, 2022
  */
 @SpringBootApplication
 public class dcwa extends PonderApplication {
