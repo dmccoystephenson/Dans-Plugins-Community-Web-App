@@ -98,6 +98,13 @@ public class DanspluginsCommunityWebApp extends PonderApplication {
         return modelAndView;
     }
 
+    @RequestMapping("/medievalfactions")
+    public ModelAndView medievalfactions() { // TODO: fix this not redirecting correctly
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("medievalfactions");
+        return modelAndView;
+    }
+
     /**
      * This can be used to get input from the console.
      * @return The inputted string.
