@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @SpringBootApplication
-public class DPCommunityApp {
+public class DansPluginsApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DPCommunityApp.class, args);
+		SpringApplication.run(DansPluginsApp.class, args);
 	}
 
 	@RequestMapping("/")
