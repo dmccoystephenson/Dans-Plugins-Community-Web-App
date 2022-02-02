@@ -54,9 +54,8 @@ public class DanspluginsCommunityWebApp extends PonderApplication {
     /**
      * The primary method for the application. This is where the running loop can be found.
      * @param user The user of the application.
-     * @return Whether the program exited successfully.
      */
-    public boolean run(CommandSender user) {
+    public void run(CommandSender user) {
         Logger.getInstance().log("Running application.");
 
         // declare variables to be used in loop
@@ -68,7 +67,7 @@ public class DanspluginsCommunityWebApp extends PonderApplication {
         while (isRunning()) {
             line = getInput();
             if (line == null) {
-                return false;
+                return;
             }
 
             // handle spaces
@@ -90,7 +89,6 @@ public class DanspluginsCommunityWebApp extends PonderApplication {
                 Logger.getInstance().log("Something went wrong processing the " + label + " command.");
             }
         }
-        return true;
     }
 
     @RequestMapping("/")
