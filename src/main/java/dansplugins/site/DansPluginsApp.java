@@ -19,4 +19,3 @@ public class DansPluginsApp {
 		return modelAndView;
 	}
 }
-            
