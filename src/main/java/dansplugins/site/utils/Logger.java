@@ -1,6 +1,6 @@
 package dansplugins.site.utils;
 
-import dansplugins.site.DansPluginsWebApp;
+import dansplugins.site.dcwa;
 
 /**
  * @author Daniel Stephenson
@@ -24,7 +24,7 @@ public class Logger {
      * @param message The message to log to the console.
      */
     public void log(String message) {
-        if (DansPluginsWebApp.getInstance().isDebugEnabled()) {
+        if (dcwa.getInstance().isDebugEnabled()) {
             System.out.println("[DEBUG] " + message);
         }
     }

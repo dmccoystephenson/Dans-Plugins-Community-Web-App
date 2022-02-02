@@ -21,8 +21,8 @@ import java.util.Scanner;
  * @author Daniel Stephenson
  */
 @SpringBootApplication
-public class DansPluginsWebApp extends PonderApplication {
-    private static DansPluginsWebApp instance;
+public class dcwa extends PonderApplication {
+    private static dcwa instance;
 
     private boolean debug = false;
     private boolean running = true;
@@ -34,15 +34,15 @@ public class DansPluginsWebApp extends PonderApplication {
      * This can be utilized to access the self-managed instance of the application.
      * @return The self-managed instance of the application.
      */
-    public static DansPluginsWebApp getInstance() {
+    public static dcwa getInstance() {
         return instance;
     }
 
     /**
      * Initializes values and calls the onStartup method.
      */
-    public DansPluginsWebApp() {
-        super("ExamplePonderApplication", "This is an example of an application created with Ponder.");
+    public dcwa() {
+        super("Dan's Plugins Community Web App", "This is an example of an application created with Ponder.");
         onStartup();
     }
 
@@ -209,8 +209,8 @@ public class DansPluginsWebApp extends PonderApplication {
      * @param args The arguments given to the program.
      */
     public static void main(String[] args) {
-        SpringApplication.run(DansPluginsWebApp.class, args);
-        DansPluginsWebApp application = new DansPluginsWebApp();
+        SpringApplication.run(dcwa.class, args);
+        dcwa application = new dcwa();
         CommandSenderImpl sender = new CommandSenderImpl();
         application.run(sender);
     }
