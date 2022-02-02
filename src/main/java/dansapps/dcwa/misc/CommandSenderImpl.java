@@ -2,7 +2,7 @@
   Copyright (c) 2022 Daniel McCoy Stephenson
   Apache License 2.0
  */
-package dansplugins.site.misc;
+package dansapps.dcwa.misc;
 
 import preponderous.ponder.system.abs.CommandSender;
 

@@ -2,13 +2,13 @@
   Copyright (c) 2022 Daniel McCoy Stephenson
   Apache License 2.0
  */
-package dansplugins.site;
+package dansapps.dcwa;
 
-import dansplugins.site.commands.HelpCommand;
-import dansplugins.site.commands.InfoCommand;
-import dansplugins.site.commands.QuitCommand;
-import dansplugins.site.misc.CommandSenderImpl;
-import dansplugins.site.utils.Logger;
+import dansapps.dcwa.commands.HelpCommand;
+import dansapps.dcwa.commands.InfoCommand;
+import dansapps.dcwa.commands.QuitCommand;
+import dansapps.dcwa.misc.CommandSenderImpl;
+import dansapps.dcwa.utils.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,8 +26,8 @@ import java.util.Scanner;
  * @since February 1st, 2022
  */
 @SpringBootApplication
-public class dcwa extends PonderApplication {
-    private static dcwa instance;
+public class DanspluginsCommunityWebApp extends PonderApplication {
+    private static DanspluginsCommunityWebApp instance;
 
     private boolean debug = false;
     private boolean running = true;
@@ -39,14 +39,14 @@ public class dcwa extends PonderApplication {
      * This can be utilized to access the self-managed instance of the application.
      * @return The self-managed instance of the application.
      */
-    public static dcwa getInstance() {
+    public static DanspluginsCommunityWebApp getInstance() {
         return instance;
     }
 
     /**
      * Initializes values and calls the onStartup method.
      */
-    public dcwa() {
+    public DanspluginsCommunityWebApp() {
         super("Dan's Plugins Community Web App", "This is an example of an application created with Ponder.");
         onStartup();
     }
@@ -214,8 +214,8 @@ public class dcwa extends PonderApplication {
      * @param args The arguments given to the program.
      */
     public static void main(String[] args) {
-        SpringApplication.run(dcwa.class, args);
-        dcwa application = new dcwa();
+        SpringApplication.run(DanspluginsCommunityWebApp.class, args);
+        DanspluginsCommunityWebApp application = new DanspluginsCommunityWebApp();
         CommandSenderImpl sender = new CommandSenderImpl();
         application.run(sender);
     }

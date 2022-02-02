@@ -2,9 +2,9 @@
   Copyright (c) 2022 Daniel McCoy Stephenson
   Apache License 2.0
  */
-package dansplugins.site.utils;
+package dansapps.dcwa.utils;
 
-import dansplugins.site.dcwa;
+import dansapps.dcwa.DanspluginsCommunityWebApp;
 
 /**
  * @author Daniel McCoy Stephenson
@@ -29,7 +29,7 @@ public class Logger {
      * @param message The message to log to the console.
      */
     public void log(String message) {
-        if (dcwa.getInstance().isDebugEnabled()) {
+        if (DanspluginsCommunityWebApp.getInstance().isDebugEnabled()) {
             System.out.println("[DEBUG] " + message);
         }
     }

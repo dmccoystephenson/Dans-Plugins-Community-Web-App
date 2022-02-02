@@ -1,10 +1,10 @@
-package dansplugins.site;
+package dansapps.dcwa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class dcwaTests {
+class danspluginsCommunityWebAppTests {
 
 	@Test
 	void contextLoads() {
