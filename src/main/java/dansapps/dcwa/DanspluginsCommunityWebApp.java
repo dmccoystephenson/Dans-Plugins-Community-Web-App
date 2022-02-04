@@ -12,6 +12,7 @@ import dansapps.dcwa.utils.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import preponderous.ponder.system.abs.ApplicationCommand;
 import preponderous.ponder.system.abs.CommandSender;
@@ -25,7 +26,7 @@ import java.util.Scanner;
  * @author Daniel McCoy Stephenson
  * @since February 1st, 2022
  */
-@SpringBootApplication
+@SpringBootApplication()
 public class DanspluginsCommunityWebApp extends PonderApplication {
     private static DanspluginsCommunityWebApp instance;
 
@@ -95,13 +96,6 @@ public class DanspluginsCommunityWebApp extends PonderApplication {
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
-        return modelAndView;
-    }
-
-    @RequestMapping("/medievalfactions")
-    public ModelAndView medievalfactions() { // TODO: fix this not redirecting correctly
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("medievalfactions");
         return modelAndView;
     }
 
